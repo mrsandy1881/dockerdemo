@@ -10,8 +10,8 @@ RUN pip install streamlit
 WORKDIR /var
 
 # copy code 
-COPY app.py 
-
+COPY app.py .
+ 
 # expose streamlit port and run 
 EXPOSE 8501
 CMD ["streamlit","run","app.py"]

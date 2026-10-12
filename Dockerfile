@@ -1,0 +1,17 @@
+# define base image 
+
+FROM python:3.14-slim
+
+#install dependency
+RUN pip install streamlit
+
+
+# SET WORKING DIRECTORY 
+WORKDIR /var
+
+# copy code 
+COPY app.py 
+
+# expose streamlit port and run 
+EXPOSE 8501
+CMD ["streamlit","run","app.py"]
